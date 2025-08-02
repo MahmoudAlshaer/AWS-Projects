@@ -26,4 +26,4 @@ Amazon S3 (Static Website Hosting)
 
 ---
 
-This project shows basic AWS S3 usage for static site deployment and public access configuration.
+This project is part of my [AWS Cloud Projects Portfolio](../README.md).
