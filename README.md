@@ -19,7 +19,7 @@ This repository contains small cloud-based projects demonstrating hands-on work 
   - Dashboard showing genre, country, and time-based stats
   - [ Project Documentation (PDF)](./AWS%20Data%20visualization%20with%20QuickSight/AWS-quicksight-project.pdf)
 
-###  [AWS Cloud Security with IAM](./AWS%20Cloud%20Security%20with%20IAM/)
+###  [AWS Cloud Security with IAM and EC2](./AWS%20Cloud%20Security%20with%20IAM%20and%20EC2/)
 - Grant secure access using IAM and EC2  
 - Includes:
   - IAM user with restricted permissions
