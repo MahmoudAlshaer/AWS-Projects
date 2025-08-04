@@ -25,7 +25,7 @@ This repository contains small cloud-based projects demonstrating hands-on work 
   - IAM user with restricted permissions
   - One EC2 instance in dev environment (accessible)
   - One EC2 instance in prod environment (restricted)
-  - [ Project Documentation (PDF)](./AWS%20Cloud%20Security%20with%20IAM/AWS-security-iam-project.pdf)
+  - [ Project Documentation (PDF)](./AWS%20Cloud%20Security%20with%20IAM%20and%20EC2/AWS-security-iam-project.pdf)
 
 ---
 
