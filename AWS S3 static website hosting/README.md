@@ -19,32 +19,32 @@ issues to make the site publicly accessible.
 Created a new S3 bucket named "nanomoo.click" 
 in the US East region.
 
-![Bucket Created](AWS%S3%screenshots/Bucket_created.png)
+![Bucket Created](AWS%S3%screenshots/Bucket%created.png)
 
 ### 2. Uploaded Website Files
 Uploaded index.html to the bucket as the 
 main entry point for the website.
 
-![Objects Added](AWS%S3%screenshots/Objects_added.png)
+![Objects Added](AWS%S3%screenshots/Objects%added.png)
 
 ### 3. Enabled Static Website Hosting
 Configured the bucket to host a static website 
 with index.html as the index document.
 
-![Static Website Hosting](AWS%S3%screenshots/Static_website_hosting_enabled.png)
+![Static Website Hosting](AWS%S3%screenshots/Static%website%hosting%enabled.png)
 
 ### 4. Troubleshot 403 Forbidden Error
 Encountered and resolved a 403 Access Denied 
 error by configuring the correct bucket policy 
 to allow public read access.
 
-![403 Error](AWS%S3%screenshots/403_Forbidden_Error.png)
+![403 Error](AWS%S3%screenshots/403%Forbidden%Error.png)
 
 ### 5. Website Live
 Successfully deployed the website and confirmed 
 it was publicly accessible.
 
-![Website Live](AWS%S3%screenshots/Website_live.png)
+![Website Live](AWS%S3%screenshots/Website%live.png)
 
 ## Key Concepts Demonstrated
 - S3 bucket creation and configuration
