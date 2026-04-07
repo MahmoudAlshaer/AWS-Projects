@@ -1,40 +1,64 @@
-﻿
-#  AWS Quicksight Netflix Dashboard
+# AWS Data Visualization with Amazon QuickSight
 
-This project showcases a cloud-based data visualization dashboard built with *Amazon Quicksight*. The dashboard presents insights and trends from a Netflix titles dataset stored in Amazon S3.
+## Overview
+Analyzed and visualized Netflix titles dataset 
+using Amazon QuickSight. Connected S3 as a data 
+source, built interactive charts and a complete 
+dashboard showing content trends across genres, 
+release years, and content types.
 
-## Project Overview
+## Dataset
+- **Source:** Kaggle Netflix Titles Dataset
+- **Size:** 3.2 MB (netflix_titles.csv)
+- **Storage:** Amazon S3 bucket 
+(quicksight-project-mahmoud)
 
-- *Data Source*: A CSV file containing Netflix titles (movies & TV shows) uploaded to Amazon S3.
-- *Services Used*: Amazon S3 and Amazon Quicksight.
-- *Goal*: To create a visual representation of the Netflix dataset using charts and summaries.
+## What I Built
 
-##  Key Features
+### 1. QuickSight Account Setup
+Created an Amazon QuickSight account and 
+configured it to connect to AWS services.
 
-- Dashboard includes:
-  - Pie charts, bar graphs, and tables
-  - Visual breakdown by type, country, genre, release year, and rating
-- Data loaded from S3 into Quicksight using a manifest.json file
-- No coding or scripting involved
+![QuickSight Account](screenshots/QuickSight-account-created.png)
 
-##  Tools & Services
+### 2. S3 Data Source Configuration
+Uploaded netflix_titles.csv and manifest.json 
+to S3, then connected QuickSight to the bucket 
+as a data source.
 
-- *Amazon S3* – For storing the CSV dataset
-- *Amazon Quicksight* – For creating the dashboard
-- *manifest.json* – Used to map the S3 file structure into Quicksight
+![S3 Bucket](screenshots/S3-bucket-with-objects.png)
+![Data Source](screenshots/Dashboard-data-source.png)
 
-##  Files Included
+### 3. Built Interactive Charts
+Created multiple visualizations including:
+- Movies vs TV Shows by Release Year (bar chart)
+- Genre distribution with filters
 
-- [AWS-quicksight-project.pdf](./AWS-quicksight-project.pdf) – Project documentation
-- manifest.json – File for linking S3 data to Quicksight
-- netflix_titles.csv – Dataset used
+![Chart](screenshots/Chart.png)
+![Chart with Filters](screenshots/Chart-with-filters.png)
 
-## What I Learned
+### 4. Completed Dashboard
+Built a full analytics dashboard combining 
+multiple charts showing Netflix content trends 
+from 2009 to 2021.
 
-- How to use Amazon Quicksight for building data dashboards
-- Structuring a manifest.json for S3 integration
-- Turning raw data into visual insights using cloud tools
+![Completed Dashboard](screenshots/Completed-dashboard.png)
 
----
+## Key Insights from the Dashboard
+- Movies consistently outnumber TV Shows 
+across all release years
+- Action & Adventure is the most common genre
+with 130+ titles
+- Content additions peaked around 2019-2021
 
-This project is part of my [AWS Cloud Projects Portfolio](../README.md).
+## Key Concepts Demonstrated
+- Amazon QuickSight account setup
+- S3 as a data source with manifest.json
+- Interactive dashboard creation
+- Data filtering and visualization
+- Real-world dataset analysis
+
+## Services Used
+- Amazon QuickSight
+- Amazon S3
+- Kaggle Netflix Dataset
