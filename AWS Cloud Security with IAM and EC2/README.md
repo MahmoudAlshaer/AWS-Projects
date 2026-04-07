@@ -1,38 +1,81 @@
-﻿
-#  AWS IAM & EC2 Cloud Security Project
+# AWS Cloud Security with IAM and EC2
 
-This project demonstrates cloud security best practices using *AWS IAM* and *Amazon EC2*. It simulates a real-world scenario where an intern at AnyCompany is granted controlled access to development resources, while being restricted from production.
+## Overview
+Implemented a secure AWS environment using 
+Identity and Access Management (IAM) and EC2. 
+Created IAM users with restricted permissions, 
+configured custom JSON policies, and verified 
+that security restrictions worked correctly 
+across development and production environments.
 
-##  Project Overview
+## What I Built
+- Custom IAM account alias (mahmoud-alshaer)
+- IAM user (dev-mahmoud) with restricted access
+- Custom JSON policy limiting EC2 actions
+- 2 EC2 instances tagged by environment
+- Verified access control worked correctly
 
-- Scenario: Provision IAM access for an intern with strict limitations.
-- Services Used: AWS IAM and Amazon EC2.
-- Goal: Grant secure access to only the development EC2 instance, while restricting access to the production EC2 instance.
+## Steps
 
-##  Key Features
+### 1. Created IAM Account Alias
+Set up a custom sign-in URL for the AWS account 
+for cleaner access management.
 
-- Created two EC2 instances: one for development and one for production.
-- Provisioned an IAM user with:
-  - Fine-grained permissions using IAM policies
-  - Access to only the development instance via tags
-- Applied least privilege principle to prevent unnecessary access.
+![IAM Alias](screenshots/IAM-alias.png)
 
-##  Tools & Services
+### 2. Created IAM User
+Created a new IAM user (dev-mahmoud) with 
+console access, simulating a developer account 
+with restricted permissions.
 
-- AWS IAM – For creating secure, role-based access  
-- Amazon EC2 – Hosting both production and development servers  
-- IAM Policies – JSON-based access rules linked to resource tags  
+![IAM User Created](screenshots/IAM-user-created.png)
 
-##  Files Included
+### 3. Configured JSON Security Policy
+Wrote a custom IAM policy that:
+- Allows all EC2 actions on development 
+environment only
+- Allows EC2 Describe on all resources
+- Denies CreateTags and DeleteTags globally
 
-- [AWS-security-iam-project.pdf](./AWS-security-iam-project.pdf) –  Full project documentation
+![JSON Policy](screenshots/JSON-policy.png)
 
-##  What I Learned
+### 4. Launched EC2 Instances
+Created 2 EC2 instances tagged with environment 
+labels to simulate dev and production separation.
 
-- How to enforce least privilege using IAM policies  
-- How to tag AWS resources for policy-based access control  
-- Real-world access control strategies for cloud environments  
+![EC2 Instances](screenshots/EC2-instances.png)
+![Instance Tags](screenshots/instance-name-and-tag.png)
 
----
+### 5. Verified Security — Access Denied ✅
+Confirmed the policy worked by attempting to 
+stop the production instance as the dev-mahmoud 
+user — correctly received Access Denied error.
 
-This project is part of my [AWS Cloud Projects Portfolio](../README.md).
+![IAM Error](screenshots/IAM-error-message.png)
+
+### 6. Verified Security — Access Granted ✅
+Confirmed the dev-mahmoud user could 
+successfully stop the development instance 
+as expected.
+
+![IAM Success](screenshots/IAM-success-message.png)
+
+## Security Policy Summary
+| Action | Dev Environment | Prod Environment |
+|---|---|---|
+| EC2 Start/Stop | ✅ Allowed | ❌ Denied |
+| EC2 Describe | ✅ Allowed | ✅ Allowed |
+| CreateTags | ❌ Denied | ❌ Denied |
+| DeleteTags | ❌ Denied | ❌ Denied |
+
+## Key Concepts Demonstrated
+- IAM user creation and management
+- Custom JSON policy writing
+- EC2 instance tagging by environment
+- Principle of least privilege
+- Access control verification and testing
+
+## Services Used
+- AWS IAM
+- Amazon EC2
+- AWS Policy Editor
