@@ -45,7 +45,7 @@ public access configuration, troubleshooting
 
 ---
 
-### 4. [AWS VPC Network Infrastructure](./AWS-VPC-Network)
+### 4. [AWS VPC Network Infrastructure](./AWS%VPC%Network)
 Built a custom Virtual Private Cloud from scratch 
 including subnet configuration and internet 
 gateway setup to enable secure network 
